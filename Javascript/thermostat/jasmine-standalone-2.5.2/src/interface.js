@@ -6,6 +6,7 @@ $(document).ready(function(){
    var aProgress = document.getElementById('activeProgress');
    var iProgressCTX = iProgress.getContext('2d');
    var thermostat = new Thermostat();
+   var city = 'London';
 
    drawInactive(iProgressCTX);
 
@@ -81,6 +82,7 @@ $(document).ready(function(){
      $('#turn-power-saving-on').click(function (){
        thermostat.switchPowerSavingOn();
        $('body').addClass('cold').removeClass('hot');
+
      });
 
      $('#turn-power-saving-off').click(function (){
@@ -88,4 +90,38 @@ $(document).ready(function(){
        $('body').addClass('hot').removeClass('cold');
      });
 
- });
+    $('#London').click(function(){
+      var city = 'London';
+      $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "/id=524901&APPID=2a793cc57b61ac02fe9ef69d7f44e4f9", function(data){
+          $('#resultDiv').text(Math.round(data.main.temp - 273.15));
+
+          });
+    });
+
+    $('#Birmingham').click(function(){
+      var city = 'Birmingham';
+      $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "/id=524901&APPID=2a793cc57b61ac02fe9ef69d7f44e4f9", function(data){
+          $('#resultDiv').text(Math.round(data.main.temp - 273.15));
+          console.log(city)
+          });
+    });
+
+    $('#Galway').click(function(){
+      var city = 'Galway';
+      $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "/id=524901&APPID=2a793cc57b61ac02fe9ef69d7f44e4f9", function(data){
+          $('#resultDiv').text(Math.round(data.main.temp - 273.15));
+          console.log(city)
+      });
+    });
+
+
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "/id=524901&APPID=2a793cc57b61ac02fe9ef69d7f44e4f9", function(data){
+      $('#resultDiv').text(Math.round(data.main.temp - 273.15));
+      console.log(city)
+  });
+
+
+
+// });
+
+});
