@@ -1,3 +1,4 @@
+console.log("this runs")
 function Thermostat() {
   this.defaultTemperature = 20;
   this.temperature = this.defaultTemperature;
