@@ -1,4 +1,3 @@
-console.log("this runs")
 function Thermostat() {
   this.defaultTemperature = 20;
   this.temperature = this.defaultTemperature;
@@ -13,7 +12,7 @@ Thermostat.prototype.raiseTemperature = function () {
 };
 
 Thermostat.prototype.lowerTemperature = function () {
-  this.temperature -= 1;
+  this.temperature -= 0.5;
 };
 
 Thermostat.prototype.togglePowerSave = function () {

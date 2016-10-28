@@ -15,7 +15,9 @@
       <div class="upperButtons">
         <div class="up down buttons">
           <button id="raise">^</button>
-          <script> document.write(thermostat.temperature); </script>
+          <p id="tempupdate">
+              0%
+          </p>
           <button id="lower" onclick="thermostat.lowerTemperature();">V</button>
         </div>
       </div>
@@ -26,6 +28,14 @@
       <div class="toggle energy saver">
         Toggle energy saver:
         <button id="toggleEnergySaver" />
+      </div>
+      TEMPERATURE OUTSIDE:
+      <button id="London">LONDON</button>
+      <button id="Grimsby">Grimsby</button>
+      <button id="Moscow">moscow</button>
+      THE Temperature Is:
+      <div id="bla">
+
       </div>
     </div>
   </body>
