@@ -12,7 +12,7 @@ input {
   border: 2px solid #476b6b;
   color: white;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none;\
   display: inline-block;
 }
 

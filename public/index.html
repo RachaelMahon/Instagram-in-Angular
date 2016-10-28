@@ -7,13 +7,14 @@
   <body>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
     <div class="thermostat">
       <p>
         THERMOSTAT
       </p>
       <div class="upperButtons">
         <div class="up down buttons">
-          <button id="raise" onclick="thermostat.raiseTemperature();" >^</button>
+          <button id="raise">^</button>
           <script> document.write(thermostat.temperature); </script>
           <button id="lower" onclick="thermostat.lowerTemperature();">V</button>
         </div>

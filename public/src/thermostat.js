@@ -41,5 +41,8 @@ Thermostat.prototype.energyUsage = function () {
   }
 };
 
+Thermostat.prototype.updateTemp = function () {
+  return thermostat.temperature;
+};
 
 var thermostat = new Thermostat();
